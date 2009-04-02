@@ -27,6 +27,7 @@ DESCRIPTION
           br             Brazilian Portuguese.
           ceb            Cebuano (Filipine dialect)
           de             German.
+          de_ch          Swiss German.
           du             Dutch.
           es             Spanish.
           fr             French.
@@ -74,10 +75,10 @@ TODO
     Support for more languages.
 
 AUTHOR
-    Abigail, *acme-time-baby@abigail.be*.
+    Abigail, <mailto:acme-time-baby@abigail.be>.
 
 SEE ALSO
-    <http://perl.abigail.nl/Modules/Acme-Time-Baby/>.
+    <git://github.com/Abigail/acme--time--baby.git>.
 
 LICENSE
     This program is copyright 2002 - 2009 by Abigail.

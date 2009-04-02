@@ -232,11 +232,11 @@ Support for more languages.
 
 =head1 AUTHOR
 
-Abigail, I<acme-time-baby@abigail.be>.
+Abigail, L<< mailto:acme-time-baby@abigail.be >>.
 
 =head1 SEE ALSO
 
-L<http://perl.abigail.nl/Modules/Acme-Time-Baby/>.
+L<< git://github.com/Abigail/acme--time--baby.git >>.
 
 =head1 LICENSE
 
