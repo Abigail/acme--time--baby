@@ -1,3 +1,7 @@
+Version 2009040201
+- Put module under /lib.
+- Moved to git (and github).
+- Doc changes.
 ----
 Revision 2.106  2004/11/01 23:39:27  abigail
 - Added Swiss German (de_ch). (Gerry Weirich)
