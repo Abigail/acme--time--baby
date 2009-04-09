@@ -1,5 +1,5 @@
 NAME
-    Acme::Time::Baby -- Tell time little children can understand
+    Acme::Time::Baby - Tell time little children can understand
 
 SYNOPSIS
         use Acme::Time::Baby;
@@ -74,14 +74,15 @@ PACKAGE NAME
 TODO
     Support for more languages.
 
+SEE ALSO
+    The current sources of this module are found on github,
+    <git://github.com/Abigail/acme--time--baby.git>.
+
 AUTHOR
     Abigail, <mailto:acme-time-baby@abigail.be>.
 
-SEE ALSO
-    <git://github.com/Abigail/acme--time--baby.git>.
-
 LICENSE
-    This program is copyright 2002 - 2009 by Abigail.
+    Copyright (C) 2002 - 2004, 2009 by Abigail.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the
