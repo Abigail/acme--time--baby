@@ -1,6 +1,7 @@
 lib/Acme/Time/Baby.pm
 Makefile.PL
 MANIFEST
+Changes
 README
 t/00_en.t
 t/01_du.t
