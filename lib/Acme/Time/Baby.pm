@@ -6,7 +6,7 @@ no  warnings 'syntax';
 
 use vars qw /$VERSION/;
 
-our $VERSION  = '2009040201';
+our $VERSION  = '2009040901';
 
 my %languages = (
     'en'      => {numbers => [qw /one two three four five six seven
@@ -144,7 +144,7 @@ __END__
 
 =head1 NAME
 
-Acme::Time::Baby -- Tell time little children can understand
+Acme::Time::Baby - Tell time little children can understand
 
 =head1 SYNOPSIS
 
@@ -230,17 +230,18 @@ in this package. Hence the name of this package.
 
 Support for more languages.
 
+=head1 SEE ALSO
+
+The current sources of this module are found on github,
+L<< git://github.com/Abigail/acme--time--baby.git >>.
+
 =head1 AUTHOR
 
 Abigail, L<< mailto:acme-time-baby@abigail.be >>.
 
-=head1 SEE ALSO
-
-L<< git://github.com/Abigail/acme--time--baby.git >>.
-
 =head1 LICENSE
 
-This program is copyright 2002 - 2009 by Abigail.
+Copyright (C) 2002 - 2004, 2009 by Abigail.
  
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),
