@@ -6,7 +6,7 @@ no  warnings 'syntax';
 
 use vars qw /$VERSION/;
 
-our $VERSION  = '2009040901';
+our $VERSION  = '2009081201';
 
 my %languages = (
     'en'      => {numbers => [qw /one two three four five six seven
