@@ -18,6 +18,7 @@ my %args = (
     LICENSE              => 'mit',
     META_MERGE           => {
         build_requires   => {'Test' => 0},
+        test_requires    => {'Test::Pod' => 1.00},
         resources        => {
             repository   => 'git://github.com/Abigail/acme--time--baby.git',
         },

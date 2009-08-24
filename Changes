@@ -1,4 +1,7 @@
 Version 2009081201
+- Added POD test.
+----
+Version 2009081201
 - Fool the idiotic CPAN testers running development versions of perl that
   have been outdated for several Christmasses.
 ----
