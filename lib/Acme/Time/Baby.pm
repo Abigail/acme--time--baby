@@ -6,7 +6,7 @@ no  warnings 'syntax';
 
 use vars qw /$VERSION/;
 
-our $VERSION  = '2009082401';
+our $VERSION  = '2009110901';
 
 my %languages = (
     'en'      => {numbers => [qw /one two three four five six seven
@@ -241,7 +241,7 @@ Abigail, L<< mailto:acme-time-baby@abigail.be >>.
 
 =head1 LICENSE
 
-Copyright (C) 2002 - 2004, 2009 by Abigail.
+Copyright (C) 2002 - 2009, 2009 by Abigail.
  
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),
