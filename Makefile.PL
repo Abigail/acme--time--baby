@@ -12,13 +12,19 @@ my %args = (
     NAME                 => 'Acme::Time::Baby',
     VERSION_FROM         => 'lib/Acme/Time/Baby.pm',
     ABSTRACT_FROM        => 'lib/Acme/Time/Baby.pm',
-    PREREQ_PM            => { },
+    PREREQ_PM            => {
+        'strict'         =>  0,
+        'warnings'       =>  0,
+        'vars'           =>  0,
+    },
     MIN_PERL_VERSION     =>  5.006,
     AUTHOR               => 'Abigail <acme-time-baby@abigail.be>',
     LICENSE              => 'mit',
     META_MERGE           => {
-        build_requires   => {'Test' => 0},
-        test_requires    => {'Test::Pod' => 1.00},
+        test_requires    => {
+            'Test::Pod'  => 1.00,
+            'Test'       => 0,
+        },
         resources        => {
             repository   => 'git://github.com/Abigail/acme--time--baby.git',
         },
