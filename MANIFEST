@@ -20,4 +20,3 @@ t/13_ceb.t
 t/14_de_ch.t
 t/90_pod.t
 t/96_pod_coverage.t
-t/99_kwalitee.t
