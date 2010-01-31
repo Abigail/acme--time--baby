@@ -18,5 +18,6 @@ t/11_br.t
 t/12_es.t
 t/13_ceb.t
 t/14_de_ch.t
+t/15_hr.t
 t/90_pod.t
 t/96_pod_coverage.t

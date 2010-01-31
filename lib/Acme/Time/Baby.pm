@@ -50,6 +50,11 @@ my %languages = (
                   format  => "La grande aiguille est sur le %s " .
                              "et la petite aiguille est sur le %s"},
 
+    'hr'      => {numbers => [qw /jedan dva tri \x{010d}etiri pet \x{0161}est sedam
+                                       osam devet deset jedanaest dvanaest/],
+                  format  => "Velika kazaljka pokazuje %s, " .
+                             "a mala kazaljka pokazuje %s"},
+
     'it'      => {numbers => ['a una', 'e due', 'e tre', 'e quattro',
                                        'e cinque', 'e sei', 'e sette',
                                        'e otto', 'e nove', 'e dieci',
@@ -181,6 +186,7 @@ currently supported:
   du             Dutch.
   es             Spanish.
   fr             French.
+  hr             Croatian.
   it             Italian.
   no             Norwegian.
   se             Swedish.
