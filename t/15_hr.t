@@ -14,16 +14,18 @@ BEGIN {
 
 # change 'tests => 1' to 'tests => last_test_to_print';
 
-use Test::More;
+use Test;
 use strict;
-BEGIN { plan tests => 24 * 60 };
+BEGIN { plan tests => 1 + 24 * 60 };
 use Acme::Time::Baby language => 'hr';
+ok(1); # If we made it this far, we're ok.
 
 #########################
 
 my $i = 0;
-my %numbers = map {$_ => ++$i} qw /jedan dva tri \x{010d}etiri pet \x{0161}est sedam
-                                       osam devet deset jedanaest dvanaest/;
+my %numbers = map {$_ => ++$i} split ' ' =>
+                   qq /jedan dva tri \x{010d}etiri pet \x{0161}est sedam
+                       osam devet deset jedanaest dvanaest/;
 
 foreach my $hours (1 .. 24) {
     foreach my $minutes (0 .. 59) {
@@ -31,8 +33,11 @@ foreach my $hours (1 .. 24) {
         my ($big)    = $r =~ /Velika kazaljka pokazuje (\S+)/;
         my ($little) = $r =~ /mala kazaljka pokazuje (\S+)/;
 
+        $big =~ s/,//;  # Croatian hack.
+
         if (!defined $big || !defined $little) {
-            fail("cannot match big or little in $hours:$minutes -> $r");
+            ok (0);
+            print ("# cannot match big or little in $hours:$minutes -> $r\n");
             next
         }
 
@@ -40,7 +45,8 @@ foreach my $hours (1 .. 24) {
 
         $big    = $numbers {$big}    and
         $little = $numbers {$little} or do {
-            pass("matching $hours:$minutes -> $r");
+            ok (0);
+            print ("# matching $hours:$minutes -> $r\n");
             next
         };
 
@@ -55,7 +61,9 @@ foreach my $hours (1 .. 24) {
 
         $ok = 0 if $h != $little;
 
-        ok ($ok)
-	    or diag "$hours:$minutes -> $r";
+        ok ($ok);
+        unless ($ok) {
+	    print "# $hours:$minutes -> $r\n";
+        }
     }
 }
