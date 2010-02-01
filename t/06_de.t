@@ -23,13 +23,14 @@ ok(1); # If we made it this far, we're ok.
 #########################
 
 my $i = 0;
-my %numbers = map {$_ => ++$i} qw /Eins Zwei Drei Vier Fünf Sechs Sieben
-                                   Acht Neun Zehn Elf Zwölf/;
+my %numbers = map {$_ => ++$i} split ' ' =>
+                               qq /Eins Zwei Drei Vier F\x{FC}nf Sechs Sieben
+                                   Acht Neun Zehn Elf Zw\x{F6}lf/;
 
 foreach my $hours (1 .. 24) {
     foreach my $minutes (0 .. 59) {
         my $r = babytime "$hours:$minutes";
-        my ($big)    = $r =~ /gro\xDFe Zeiger ist auf der (\S+)/;
+        my ($big)    = $r =~ /gro\x{DF}e Zeiger ist auf der (\S+)/;
         my ($little) = $r =~ /kleine Zeiger ist auf der (\S+)/;
 
         if (!defined $big || !defined $little) {

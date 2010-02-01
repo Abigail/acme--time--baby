@@ -23,14 +23,15 @@ ok(1); # If we made it this far, we're ok.
 #########################
 
 my $i = 0;
-my %numbers = map {$_ => ++$i} qw /en to tre fire fem seks syv
-                                   åtte ni ti elleve tolv/;
+my %numbers = map {$_ => ++$i} split ' ' =>
+                               qq /en to tre fire fem seks syv
+                                   \x{E5}tte ni ti elleve tolv/;
 
 foreach my $hours (1 .. 24) {
     foreach my $minutes (0 .. 59) {
         my $r = babytime "$hours:$minutes";
-        my ($big)    = $r =~ /store viseren er på (\S+)/;
-        my ($little) = $r =~ /lille viseren er på (\S+)/;
+        my ($big)    = $r =~ /store viseren er p\x{E5} (\S+)/;
+        my ($little) = $r =~ /lille viseren er p\x{E5} (\S+)/;
 
         if (!defined $big || !defined $little) {
             ok (0);

@@ -23,8 +23,10 @@ ok(1); # If we made it this far, we're ok.
 #########################
 
 my $i = 0;
-my %numbers = map {$_ => ++$i} qw /eis zwöi drü vieri föifi sächsi sibni
-                                   achti nüni zäni elfi zwölfi/;
+my %numbers = map {$_ => ++$i} split ' ' =>
+                               qq /eis zw\x{F6}i dr\x{FC} vieri f\x{F6}ifi
+                                   s\x{E4}chsi sibni achti n\x{FC}ni z\x{E4}ni
+                                   elfi zw\x{F6}lfi/;
 
 foreach my $hours (1 .. 24) {
     foreach my $minutes (0 .. 59) {

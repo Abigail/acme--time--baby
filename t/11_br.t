@@ -23,14 +23,15 @@ ok(1); # If we made it this far, we're ok.
 #########################
 
 my $i = 0;
-my %numbers = map {$_ => ++$i} qw /um dois três quatro cinco seis
+my %numbers = map {$_ => ++$i} split ' ' =>
+                               qq /um dois tr\x{EA}s quatro cinco seis
                                    sete oito nove dez onze doze/;
 
 foreach my $hours (1 .. 24) {
     foreach my $minutes (0 .. 59) {
         my $r = babytime "$hours:$minutes";
-        my ($big)    = $r =~ /ponteiro grande está no (\S+)/;
-        my ($little) = $r =~ /ponteiro pequeno está no (\S+)/;
+        my ($big)    = $r =~ /ponteiro grande est\x{E1} no (\S+)/;
+        my ($little) = $r =~ /ponteiro pequeno est\x{E1} no (\S+)/;
 
         if (!defined $big || !defined $little) {
             ok (0);

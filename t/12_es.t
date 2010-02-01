@@ -29,8 +29,8 @@ my %numbers = map {$_ => ++$i} qw /uno dos tres cuatro cinco seis siete
 foreach my $hours (1 .. 24) {
     foreach my $minutes (0 .. 59) {
         my $r = babytime "$hours:$minutes";
-        my ($big)    = $r =~ /manecilla grande está sobre el (\S+)/;
-        my ($little) = $r =~ /manecilla pequeña está sobre el (\S+)/;
+        my ($big)    = $r =~ /manecilla grande est\x{E1} sobre el (\S+)/;
+        my ($little) = $r =~ /manecilla peque\x{F1}a est\x{E1} sobre el (\S+)/;
 
         if (!defined $big || !defined $little) {
             ok (0);
