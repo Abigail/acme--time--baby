@@ -33,8 +33,6 @@ foreach my $hours (1 .. 24) {
         my ($big)    = $r =~ /Velika kazaljka pokazuje (\S+)/;
         my ($little) = $r =~ /mala kazaljka pokazuje (\S+)/;
 
-        $big =~ s/,//;  # Croatian hack.
-
         if (!defined $big || !defined $little) {
             ok (0);
             print ("# cannot match big or little in $hours:$minutes -> $r\n");

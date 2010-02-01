@@ -58,7 +58,7 @@ my %languages = (
     'hr'      => {numbers => [split ' ' =>
                               qq /jedan dva tri \x{010d}etiri pet \x{0161}est
                                   sedam osam devet deset jedanaest dvanaest/],
-                  format  => "Velika kazaljka pokazuje %s, " .
+                  format  => "Velika kazaljka pokazuje %s " .
                              "a mala kazaljka pokazuje %s"},
 
     'it'      => {numbers => ['a una', 'e due', 'e tre', 'e quattro',
