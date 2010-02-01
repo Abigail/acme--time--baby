@@ -14,10 +14,11 @@ my %languages = (
                   format  => "The big hand is on the %s " .
                              "and the little hand is on the %s"},
 
-    'br'      => {numbers => [qw /um dois três quatro cinco seis
+    'br'      => {numbers => [split ' ' =>
+                              qq /um dois tr\x{EA}s quatro cinco seis
                                      sete oito nove dez onze doze/],
-                  format  => "O ponteiro grande está no %s " .
-                             "e o ponteiro pequeno está no %s"},
+                  format  => "O ponteiro grande est\x{E1} no %s " .
+                             "e o ponteiro pequeno est\x{E1} no %s"},
 
     'ceb'     => {numbers => [qw /usa duha tulo upat lima unom pito
                                   walo siyam napulo/,
@@ -25,13 +26,17 @@ my %languages = (
                   format  => "Ang dako nga kamut naa sa %s " .
                              "ang gamay nga kamut naa sa %s"},
 
-    'de'      => {numbers => [qw /Eins Zwei Drei Vier Fünf Sechs Sieben
-                                       Acht Neun Zehn Elf Zwölf/],
-                  format  => "Der gro\xDFe Zeiger ist auf der %s " .
+    'de'      => {numbers => [split ' ' =>
+                              qq /Eins Zwei Drei Vier F\x{FC}nf Sechs Sieben
+                                       Acht Neun Zehn Elf Zw\x{F6}lf/],
+                  format  => "Der gro\x{DF}e Zeiger ist auf der %s " .
                              "und der kleine Zeiger ist auf der %s"},
 
-    'de_ch'   => {numbers => [qw /eis zwöi  drü  vieri föifi sächsi sibni
-                                      achti nüni zäni  elfi  zwölfi/],
+    'de_ch'   => {numbers => [split ' ' =>
+                              qq /eis zw\x{F6}i  dr\x{FC}  vieri f\x{F6}ifi
+                                  s\x{E4}chsi sibni
+                                      achti n\x{FC}ni z\x{E4}ni  elfi
+                                  zw\x{F6}lfi/],
                   format  => "De gross zeiger isch uf em %s " .
                              "und de chlii zeiger isch uf em %s"},
 
@@ -42,15 +47,16 @@ my %languages = (
 
     'es'      => {numbers => [qw /uno dos tres cuatro cinco seis siete
                                       ocho nueve diez once doce/],
-                  format  => "La manecilla grande está sobre el %s " .
-                             "y la manecilla pequeña está sobre el %s"},
+                  format  => "La manecilla grande est\x{E1} sobre el %s y " .
+                             "la manecilla peque\x{F1}a est\x{E1} sobre el %s"},
 
     'fr'      => {numbers => [qw /un deux trois quatre cinq six sept
                                      huit neuf dix onze douze/],
                   format  => "La grande aiguille est sur le %s " .
                              "et la petite aiguille est sur le %s"},
 
-    'hr'      => {numbers => [qw /jedan dva tri \x{010d}etiri pet \x{0161}est
+    'hr'      => {numbers => [split ' ' =>
+                              qq /jedan dva tri \x{010d}etiri pet \x{0161}est
                                   sedam osam devet deset jedanaest dvanaest/],
                   format  => "Velika kazaljka pokazuje %s, " .
                              "a mala kazaljka pokazuje %s"},
@@ -62,15 +68,17 @@ my %languages = (
                   format  => "La lancetta lunga e' sull%s " .
                              "e quella corta e' sull%s"},
 
-    'no'      => {numbers => [qw /en to tre fire fem seks syv
-                                     åtte ni ti elleve tolv/],
-                  format  => "Den store viseren er på %s " .
-                             "og den lille viseren er på %s"},
+    'no'      => {numbers => [split ' ' =>
+                              qq /en to tre fire fem seks syv
+                                     \x{E5}tte ni ti elleve tolv/],
+                  format  => "Den store viseren er p\x{E5} %s " .
+                             "og den lille viseren er p\x{E5} %s"},
 
-    'se'      => {numbers => [qw /ett två tre fyra fem sex sju
-                                      åtta nio tio elva tolv/],
-                  format  => "Den stora visaren är på %s " .
-                             "och den lilla visaren är på %s"},
+    'se'      => {numbers => [split ' ' =>
+                              qq /ett tv\x{E5} tre fyra fem sex sju
+                                      \x{E5}tta nio tio elva tolv/],
+                  format  => "Den stora visaren \x{E4}r p\x{E5} %s " .
+                             "och den lilla visaren \x{E4}r p\x{E5} %s"},
 
     'swedish chef'
               => {numbers => [qw /one tvu three ffuoor ffeefe six
