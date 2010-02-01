@@ -203,9 +203,6 @@ currently supported:
 
 If no language argument is given, English is used.
 
-Note that some languages use accented letters. The returned 
-sentences are correct for an ISO 8859-1 platform.
-
 =item format STRING
 
 This is the format used to represent the time. It will be passed to
