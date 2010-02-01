@@ -50,8 +50,8 @@ my %languages = (
                   format  => "La grande aiguille est sur le %s " .
                              "et la petite aiguille est sur le %s"},
 
-    'hr'      => {numbers => [qw /jedan dva tri \x{010d}etiri pet \x{0161}est sedam
-                                       osam devet deset jedanaest dvanaest/],
+    'hr'      => {numbers => [qw /jedan dva tri \x{010d}etiri pet \x{0161}est
+                                  sedam osam devet deset jedanaest dvanaest/],
                   format  => "Velika kazaljka pokazuje %s, " .
                              "a mala kazaljka pokazuje %s"},
 
